@@ -1,0 +1,298 @@
+#container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
+}
+
+$colorBlue: rgb(3, 3, 22);
+
+@keyframes animationButtonDownPage {
+    0% {
+        transform: translateY(initial);
+    }
+    10% {
+        transform: translateY(40px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(initial);
+    }
+}
+
+.header-page-index {
+    width: 100%;
+    height: 100px;
+    background-color: $colorBlue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    & .image-logo {
+        width: 150px;
+        height: 50px;
+        background-color: gray;
+    }
+}
+
+.banner-form-page-index {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: url(/src/styles/planetas-4k.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ol-banner-items {
+    width: 40%;
+    min-width: 400px;
+    height: 50%;
+    padding: 20px;
+    background-color: #ffffff63;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+    & li {
+        margin: 0 0 20px 0;
+        color: #ffffff;
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+
+.form-wrapper {
+    width: 30%;
+    min-width: 400px;
+    height: calc(100% + 40px);
+    background-color: #ffffff;
+    border: 3px solid rgb(204, 204, 204);
+    transform: translateY(-20px);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px;
+    & h2 {
+        margin: 0 0 20px 0;
+        color: rgb(34, 34, 34);
+        font-size: 25px;
+        font-weight: 600;
+    }
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    & span {
+        margin: 0 0 20px 0;
+    }
+    & button[type="submit"] {
+        height: 16%;
+        outline: none;
+        border: none;
+        background-color: $colorBlue;
+        color: #ffffff;
+        font-size: 25px;
+    }
+}
+form > button[type="submit"]:hover {
+    transition-duration: 0.4s;
+    transform: translateY(-10px);
+    background-color: $colorBlue;
+}
+
+.field-form-wrapper {
+    width: 100%;
+    height: 16%;
+    padding: 10px 0 0 0;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+
+.field-form-wrapper:hover,
+.field-form-wrapper > input:focus {
+    border-bottom: 1px solid rgb(18, 62, 255);
+}
+
+.field-form-wrapper > input {
+    height: 60%;
+    border: none;
+    outline: none;
+}
+
+h3 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.text-information-section-page-index {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 70px 0 0 0;
+    background-color: $colorBlue;
+    color: #ffffff;
+    & p {
+        width: 50%;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    & .image-down-page-index {
+        width: 70px;
+        height: 70px;
+        background-image: url(/src/images/seta-para-baixo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-color: #eeeeee;
+        transform: translateY(35px);
+        border-radius: 50%;
+        animation: animationButtonDownPage 1s 15;
+    }
+}
+
+.shelf-section-page-index {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 50px 0 0 0;
+}
+
+.information-for-web-page-index {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 30px 0;
+    font-size: 19px;
+    color: rgba(156, 156, 156, 0.671);
+    cursor: default;
+}
+
+.swiper {
+    width: 100%;
+    height: 550px;
+}
+
+.wrapper-product,
+.description-product-page-index-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 5px;
+    background-color: rgb(255, 255, 255);
+    & button {
+        width: 100%;
+        height: 40px;
+        border: none;
+        background-color: $colorBlue;
+        color: #ffffff;
+        font-size: 1.3rem;
+    }
+}
+
+.description-product-page-index-wrapper > button:hover {
+    transition-duration: 0.4s;
+    transform: translateY(-5px);
+}
+
+.wrapper-product,
+.description-product-page-index-wrapper:hover {
+    transition-duration: 1s;
+    transform: translateY(-10px);
+    background-color: rgba(0, 47, 255, 0.014);
+}
+
+.name-product-page-index {
+    font-size: 2rem;
+    color: $colorBlue;
+    font-weight: 600;
+}
+
+.description-product-page-index {
+    font-size: 1.3rem;
+    color: gray;
+    text-align: center;
+}
+
+.price-product-page-index {
+    font-size: 2.2rem;
+    color: $colorBlue;
+    font-weight: 600;
+    & span {
+        color: rgba(128, 128, 128, 0.568);
+        text-decoration: line-through;
+        margin: 0 10px 0 0;
+        font-size: 1.4rem;
+    }
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footing {
+    width: 100%;
+    height: 160px;
+    border-top: 0.5px solid rgba(128, 128, 128, 0.486);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0 60px 0;
+    font-size: 17px;
+    color: gray;
+    & a {
+        color: gray;
+        text-decoration: none;
+    }
+}
